@@ -1,0 +1,22 @@
+DEPLOYMENT CHECKLIST
+
+To make this accessible from a phone without running Node locally, deploy the project to any hosting service that supports:
+- Node.js 20+
+- long-running Express server
+- environment variables
+- outbound HTTPS requests
+- enough temporary disk space for generated MP4 files
+
+Set these environment variables on the host:
+OPENAI_API_KEY
+TEXT_MODEL=gpt-5.6-luna
+VIDEO_MODEL=sora-2
+TTS_MODEL=gpt-4o-mini-tts
+PORT (usually supplied automatically by the host)
+
+Start command:
+npm start
+
+Then open the HTTPS URL supplied by your host on your phone.
+
+Do not put OPENAI_API_KEY into public/index.html.
